@@ -8,9 +8,30 @@ angular.module('starter.controllers', [])
   $scope.playGif = function(){
     console.log('clicked');
     document.getElementById('excimage').src = "http://efgh-technologies.com/resources/gif/W01_The_neck_stretch_front_to_back.gif";
-    
+
+    var timeLeft = 30;
+    var elem = document.getElementById('countdownTime');
+
+    var timerId = setInterval(countdown,1000);
+
+    function countdown(){
+      if(timeLeft == 0)
+      {
+          clearTimeout(timerId);
+          console.log('time up');
+          //do something
+      }
+      else
+      {
+        elem.innerHTML = timeLeft +'';
+        timeLeft--;
+      }
+
+    }
 
   };
+
+
 
 
 }
