@@ -1,12 +1,13 @@
 <ion-view view-title="Browse">
   <ion-content ng-controller="KettleCtrl">
-    <h2>Single Snatch - Left arm</h2>
+    <h2 style="text-align:center;">{{excTitle}}</h2>
+
     <img  id="excimage" style="display:block;margin:auto;width:70%;height:70%;" 
-    src="{{jpgImage}}"
+    src="{{staticImageLink}}"
      width="300" height="300">
     </br>
     <div align="center" ">
-    <a  href="#" style="text-decoration:none;" ng-click="playGif()"><h2 style = "color:blue;"> START </h2></a>
+    <a  href="" style="text-decoration:none;" ng-click="playGif()"><h2 style = "color:blue;"> START </h2></a>
     <h2 id="countdownTime">30</h2>
     </div>
     <div style="position:relative;">

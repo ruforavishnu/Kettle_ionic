@@ -58,15 +58,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-     .state('app.begin', {
-      url: '/begin',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/begin.html',
-          controller: 'BeginCtrl'
-        }
-      }
-    })
+     
 
 
   .state('app.single', {
