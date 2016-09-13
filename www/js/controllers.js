@@ -79,13 +79,23 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+    { title: 'Week 1 Day 1', id: 1 },
+    { title: 'Week 1 Day 2', id: 2 },
+    { title: 'Week 1 Day 3', id: 3 },
+    { title: 'Week 2 Day 1', id: 4 },
+    { title: 'Week 2 Day 2', id: 5 },
+    { title: 'Week 2 Day 3', id: 6 },
+    { title: 'Week 3 Day 1', id: 7 },
+    { title: 'Week 3 Day 2', id: 8 },
+    { title: 'Week 3 Day 3', id: 9 },
+    { title: 'Week 4 Day 1', id: 10 },
+    { title: 'Week 4 Day 2', id: 11 },
+    { title: 'Week 4 Day 3', id: 12 },
   ];
+
+    $scope.loadPage = function(id){
+      console.log('clicked on '+id);
+    }
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
