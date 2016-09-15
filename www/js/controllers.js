@@ -64,8 +64,8 @@ angular.module('starter.controllers', [])
 
   $scope.playGif = function(){
     console.log('clicked on start ');
-    console.log('dynamicImageLink value:'+$scope.dynamicImageLink);
-    document.getElementById('excimage').src = ""+$scope.dynamicImageLink;
+    console.log('dynamicImageLink value:'+$rootScope.dynamicImageLink);
+    document.getElementById('excimage').src = ""+$rootScope.dynamicImageLink;
 
     var timeLeft = 30;
     var elem = document.getElementById('countdownTime');
@@ -95,33 +95,17 @@ angular.module('starter.controllers', [])
 
 //note no 9 and 11 are missing
 
-  $scope.computePrevPage = function(id)
-  {
-      if(id < 1)
-        id = 12;
-      else
-        id = id-1;
-
-      return id;
-
-  }
-  $scope.computeNextPage = function(id)
-  {
-      if(id > 11)
-        id = 1;
-      else
-        id = id+1;
-
-      return id;
-
-  }
- 
+      $rootScope.pageId=id;
+      $rootScope.selectedIndex = id;
+      $rootScope.staticImageLink = "http://efgh-technologies.com/resources/gif/W01_The_neck_stretch_front_to_back.gif";
+      $rootScope.dynamicImageLink = "";
+      $rootScope.audioLink = "";
 
 
     $scope.loadPage = function(id){
 
 
-      console.log('clicked on:'+id);
+      console.log('loading page :'+id);
       
 
       $rootScope.pageId=id;
@@ -129,21 +113,23 @@ angular.module('starter.controllers', [])
       $rootScope.staticImageLink = "";
       $rootScope.dynamicImageLink = "";
       $rootScope.audioLink = "";
+
       
 
 
-
+console.log('inside switch, staticImageLink:'+staticImageLink);
       switch(id)
       {
+
         case 1:
-              $scope.excTitle = "Neck Stretch - Front to Back";
+              $rootScope.excTitle = "Neck Stretch - Front to Back";
               $rootScope.staticImageLink = "http://efgh-technologies.com/resources/jpg/W01_The_neck_stretch_front_to_back.jpg";
               $rootScope.dynamicImageLink = "http://efgh-technologies.com/resources/gif/W01_The_neck_stretch_front_to_back.gif";
               $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W01_The_neck_stretch_front_to_back.mp3";
               break;
 
         case 2:
-              $scope.excTitle = "Neck Stretch - Left to Right";
+              $rootScope.excTitle = "Neck Stretch - Left to Right";
               $rootScope.staticImageLink = "http://efgh-technologies.com/resources/jpg/W02_The_neck_stretch_left_to_right.jpg";
               $rootScope.dynamicImageLink = "http://efgh-technologies.com/resources/gif/W02_The_neck_stretch_left_to_right.gif";
               $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W01_The_neck_stretch_front_to_back.mp3";

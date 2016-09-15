@@ -1,1 +1,43 @@
 /* Empty. Add your own CSS if you like */
+
+
+.larger {
+    font-size: 40px;
+}
+.button-main{
+	color:#379dff; 
+	font-weight:500; 
+	margin:0 !important; 
+	padding:20px 0; 
+	font-size:42px;
+}
+.button-main:hover{
+	color:#379dff; 
+	font-weight:500; 
+	margin:0; 
+	padding:20px 0; 
+	font-size:42px;
+}
+
+.sub-counter{
+	text-align:center; 
+	color:#d1cbcb; 
+	font-size:64px; 
+	margin:0; 
+	padding:0;
+}
+
+.rewind
+{
+	
+	
+
+}
+
+.forward
+{
+	position:absolute;
+	right:0;
+}
+
+
