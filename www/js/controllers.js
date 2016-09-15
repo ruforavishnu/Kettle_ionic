@@ -1,45 +1,7 @@
 angular.module('starter.controllers', [])
 
 
-.controller('KettleCtrl', function($scope,$rootScope){
 
-  
-
-  console.log("received index in KettleCtrl:"+$scope.selectedIndex);
-  
-
-  $scope.playGif = function(){
-    console.log('clicked on start ');
-    console.log('dynamicImageLink value:'+$scope.dynamicImageLink);
-    document.getElementById('excimage').src = ""+$scope.dynamicImageLink;
-
-    var timeLeft = 30;
-    var elem = document.getElementById('countdownTime');
-
-    var timerId = setInterval(countdown,1000);
-
-    function countdown(){
-      if(timeLeft == 0)
-      {
-          clearTimeout(timerId);
-          console.log('time up');
-          //do something
-      }
-      else
-      {
-        elem.innerHTML = timeLeft +'';
-        timeLeft--;
-      }
-
-    }
-
-  };
-
-
-
-
-}
-)
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
   // With the new view caching in Ionic, Controllers are only called
@@ -97,30 +59,91 @@ angular.module('starter.controllers', [])
     { title: 'Week 4 Day 3', id: 12 },
   ];
 
+  
+
+
+  $scope.playGif = function(){
+    console.log('clicked on start ');
+    console.log('dynamicImageLink value:'+$scope.dynamicImageLink);
+    document.getElementById('excimage').src = ""+$scope.dynamicImageLink;
+
+    var timeLeft = 30;
+    var elem = document.getElementById('countdownTime');
+
+    var timerId = setInterval(countdown,1000);
+
+    function countdown(){
+      if(timeLeft == 0)
+      {
+          clearTimeout(timerId);
+          console.log('time up');
+
+          
+          //do something
+      }
+      else
+      {
+        elem.innerHTML = timeLeft +'';
+        timeLeft--;
+      }
+
+    }
+
+  };
+
+
+
 //note no 9 and 11 are missing
+
+  $scope.computePrevPage = function(id)
+  {
+      if(id < 1)
+        id = 12;
+      else
+        id = id-1;
+
+      return id;
+
+  }
+  $scope.computeNextPage = function(id)
+  {
+      if(id > 11)
+        id = 1;
+      else
+        id = id+1;
+
+      return id;
+
+  }
  
 
 
     $scope.loadPage = function(id){
+
+
+      console.log('clicked on:'+id);
       
+
+      $rootScope.pageId=id;
       $rootScope.selectedIndex = id;
       $rootScope.staticImageLink = "";
       $rootScope.dynamicImageLink = "";
       $rootScope.audioLink = "";
-      $rootScope.excTitle="Excercise title";
+      
+
 
 
       switch(id)
       {
         case 1:
-              $rootScope.excTitle = "Neck Stretch - Front to Back";
+              $scope.excTitle = "Neck Stretch - Front to Back";
               $rootScope.staticImageLink = "http://efgh-technologies.com/resources/jpg/W01_The_neck_stretch_front_to_back.jpg";
               $rootScope.dynamicImageLink = "http://efgh-technologies.com/resources/gif/W01_The_neck_stretch_front_to_back.gif";
               $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W01_The_neck_stretch_front_to_back.mp3";
               break;
 
         case 2:
-              $rootScope.excTitle = "Neck Stretch - Left to Right";
+              $scope.excTitle = "Neck Stretch - Left to Right";
               $rootScope.staticImageLink = "http://efgh-technologies.com/resources/jpg/W02_The_neck_stretch_left_to_right.jpg";
               $rootScope.dynamicImageLink = "http://efgh-technologies.com/resources/gif/W02_The_neck_stretch_left_to_right.gif";
               $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W01_The_neck_stretch_front_to_back.mp3";
@@ -199,6 +222,10 @@ angular.module('starter.controllers', [])
 
 
       }
+
+      $rootScope.excTitle="Excercise title"+ id;
+
+      
       
 
       console.log('inside PlaylistsCtrl, clicked on '+$rootScope.selectedIndex);
