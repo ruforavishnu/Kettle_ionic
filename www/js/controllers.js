@@ -145,14 +145,14 @@ angular.module('starter.controllers', [])
               $rootScope.excTitle = "Neck Stretch - Left to Right";
               $rootScope.staticImageLink = "http://efgh-technologies.com/resources/jpg/W02_The_neck_stretch_left_to_right.jpg";
               $rootScope.dynamicImageLink = "http://efgh-technologies.com/resources/gif/W02_The_neck_stretch_left_to_right.gif";
-              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W01_The_neck_stretch_front_to_back.mp3";
+              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W02_The_neck_stretch_left_to_right.mp3";
               break;
 
         case 3:
               $rootScope.excTitle = "Neck Stretch - Lateral flexion";
               $rootScope.staticImageLink = "http://efgh-technologies.com/resources/jpg/W03_Neck_stretch_lateral_flexion.jpg";
               $rootScope.dynamicImageLink = "http://efgh-technologies.com/resources/gif/W03_Neck_stretch_lateral_flexion.gif";
-              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W01_The_neck_stretch_front_to_back.mp3";
+              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W03_Neck_stretch_lateral_flexion.mp3";
               break;
 
 
@@ -160,55 +160,55 @@ angular.module('starter.controllers', [])
               $rootScope.excTitle = "Shoulder - Roll back";
               $rootScope.staticImageLink = "http://efgh-technologies.com/resources/jpg/W04_Shoulder_roll_back.jpg";
               $rootScope.dynamicImageLink = "http://efgh-technologies.com/resources/gif/W04_Shoulder_roll_back.gif";
-              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W01_The_neck_stretch_front_to_back.mp3";
+              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W04_Shoulder_roll.mp3";
               break;
          case 5:
               $rootScope.excTitle = "Shoulder - Roll front";
               $rootScope.staticImageLink = "http://efgh-technologies.com/resources/jpg/W05_Shoulder_roll_front.jpg";
               $rootScope.dynamicImageLink = "http://efgh-technologies.com/resources/gif/W05_Shoulder_roll_front.gif";
-              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W01_The_neck_stretch_front_to_back.mp3";
+              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W05_Forward_shoulder_stretch.mp3";
               break;
          case 6:
               $rootScope.excTitle = "Scapular Rotation";
               $rootScope.staticImageLink = "http://efgh-technologies.com/resources/jpg/W06_Scapular_rotation.jpg";
               $rootScope.dynamicImageLink = "http://efgh-technologies.com/resources/gif/W06_Scapular_rotation.gif";
-              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W01_The_neck_stretch_front_to_back.mp3";
+              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W06_Scapular_rotation.mp3";
               break;
          case 7:
               $rootScope.excTitle = "The Matrix";
               $rootScope.staticImageLink = "http://efgh-technologies.com/resources/jpg/W07_The_Matrix.jpg";
               $rootScope.dynamicImageLink = "http://efgh-technologies.com/resources/gif/W07_The_Matrix.gif";
-              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W01_The_neck_stretch_front_to_back.mp3";
+              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W07_The_Matrix.mp3";
               break;
          case 8:
               $rootScope.excTitle = "Shoulder Rotation";
               $rootScope.staticImageLink = "http://efgh-technologies.com/resources/jpg/W08_Shoulder_rotation.jpg";
               $rootScope.dynamicImageLink = "http://efgh-technologies.com/resources/gif/W08_Shoulder_rotation.gif";
-              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W01_The_neck_stretch_front_to_back.mp3";
+              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W08_Shoulder_inward_rotation.mp3";
               break;
          case 9:
               $rootScope.excTitle = "Neck Stretch - Lateral flexion";
               $rootScope.staticImageLink = "http://efgh-technologies.com/resources/jpg/W03_Neck_stretch_lateral_flexion.jpg";
               $rootScope.dynamicImageLink = "http://efgh-technologies.com/resources/gif/W01_The_neck_stretch_front_to_back.gif";
-              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W01_The_neck_stretch_front_to_back.mp3";
+              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W08_Shoulder_inward_rotation.mp3";
               break;
          case 10:
               $rootScope.excTitle = "Spinal";
               $rootScope.staticImageLink = "http://efgh-technologies.com/resources/jpg/W10_Spinal_flexion.jpg";
               $rootScope.dynamicImageLink = "http://efgh-technologies.com/resources/gif/W10_Spinal_flexion.gif";
-              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W01_The_neck_stretch_front_to_back.mp3";
+              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W10_Left_spinal_flexion.mp3";
               break;
          case 11:
               $rootScope.excTitle = "Neck Stretch - Lateral flexion";
               $rootScope.staticImageLink = "http://efgh-technologies.com/resources/jpg/W03_Neck_stretch_lateral_flexion.jpg";
               $rootScope.dynamicImageLink = "http://efgh-technologies.com/resources/gif/W01_The_neck_stretch_front_to_back.gif";
-              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W01_The_neck_stretch_front_to_back.mp3";
+              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W11_Right_spinal_flexion.mp3";
               break;
          case 12:
               $rootScope.excTitle = "Neck Stretch - Lateral flexion";
-              $rootScope.staticImageLink = "http://efgh-technologies.com/resources/jpg/W03_Neck_stretch_lateral_flexion.jpg";
+              $rootScope.staticImageLink = "http://efgh-technologies.com/resources/jpg/W12_Bending_forward_flexion.jpg";
               $rootScope.dynamicImageLink = "http://efgh-technologies.com/resources/gif/W12_Bending_forward_flexion.gif";
-              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W01_The_neck_stretch_front_to_back.mp3";
+              $rootScope.audioLink = "http://efgh-technologies.com/resources/audio/W12_Bending_forward_flexion.mp3";
               break;
         default:
 
@@ -221,6 +221,8 @@ angular.module('starter.controllers', [])
 
 
       }
+      var audio = new Audio($rootScope.audioLink);
+      audio.play();
 
 
     
