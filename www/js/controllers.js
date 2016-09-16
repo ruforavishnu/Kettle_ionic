@@ -4,40 +4,6 @@ angular.module('starter.controllers', [])
 .controller('KettleCtrl', function($scope,$rootScope){
 
   
-
-  console.log("received index in KettleCtrl:"+$scope.selectedIndex);
-  
-
-  $scope.playGif = function(){
-    console.log('clicked on start ');
-    console.log('dynamicImageLink value:'+$scope.dynamicImageLink);
-    document.getElementById('excimage').src = ""+$scope.dynamicImageLink;
-
-    var timeLeft = 30;
-    var elem = document.getElementById('countdownTime');
-
-    var timerId = setInterval(countdown,1000);
-
-    function countdown(){
-      if(timeLeft == 0)
-      {
-          clearTimeout(timerId);
-          console.log('time up');
-          //do something
-      }
-      else
-      {
-        elem.innerHTML = timeLeft +'';
-        timeLeft--;
-      }
-
-    }
-
-  };
-
-
-
-
 }
 )
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
@@ -98,16 +64,72 @@ angular.module('starter.controllers', [])
   ];
 
 //note no 9 and 11 are missing
+
+
+
+  
+  
+
+  $scope.playGif = function(){
+    console.log('clicked on start ');
+    console.log('dynamicImageLink value:'+$rootScope.dynamicImageLink);
+    console.log('staticImageLink value:'+$rootScope.staticImageLink);
+   
+    var buttonValue = document.getElementById('toggleButton').innerHTML;
+    if(buttonValue === 'START')
+    {
+      document.getElementById('toggleButton').innerHTML='STOP';
+      
+    }
+    else
+    {
+     document.getElementById('toggleButton').innerHTML='START'; 
+     document.getElementById('excimage').src =  $rootScope.dynamicImageLink;
+    }
+    console.log('buttonValue:'+buttonValue);
+    var timeLeft = 30;
+    var elem = document.getElementById('countdownTime');
+
+    var timerId = setInterval(countdown,1000);
+
+    function countdown(){
+      if(timeLeft == 0)
+      {
+          clearTimeout(timerId);
+          console.log('time up');
+          //do something
+      }
+      else
+      {
+        elem.innerHTML = timeLeft +'';
+        timeLeft--;
+      }
+
+    }
+
+  };
+
+
+
+
  
 
 
     $scope.loadPage = function(id){
       
+      
+
       $rootScope.selectedIndex = id;
       $rootScope.staticImageLink = "";
       $rootScope.dynamicImageLink = "";
       $rootScope.audioLink = "";
       $rootScope.excTitle="Excercise title";
+
+      console.log("loadPage invoked with pageId:"+$rootScope.pageId);
+
+
+      $rootScope.pageId = id;
+
 
 
       switch(id)
@@ -199,6 +221,10 @@ angular.module('starter.controllers', [])
 
 
       }
+
+
+    
+
       
 
       console.log('inside PlaylistsCtrl, clicked on '+$rootScope.selectedIndex);
